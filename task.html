@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/task.css') }}" />
+    <title>{{ page_title }}</title>
+    <link rel="icon" href="https://i.pinimg.com/736x/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.jpg" type="image/png">
+
+</head>
+<body>
+    <div class="topbar-pin">
+        <div class="topbar-content">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Nhập từ khóa tìm kiếm..." onkeyup="searchTable()">
+            <div class="dark-mode-toggle-container">
+                <div class="toggle-switch" onclick="toggleDarkMode()">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <h2>{{ table_title }}</h2>
+
+    <div class="info-container">
+        <p>Mô tả task: {{ table_info }}</p>
+        <p>Chi phí từng thành viên: {{ price }}</p>
+        <p>Đã chuyển tiền: {{ list_success }} người</p>
+        <p>Chưa chuyển tiền: {{ list_not_success }} người</p>
+    </div>
+
+    <div class="export-container">
+        <button id="exportButton" class="export-button" onclick="exportTableToExcel('studentTable')">Xuất Excel</button>
+        <button id="exportButton" class="export-button" onclick="exportTableToPDF('studentTable')">Xuất PDF</button>
+    </div>
+
+    <div class="table-container">
+        <table id="studentTable" border="1" cellspacing="0" cellpadding="5">
+            <thead>
+                <tr> 
+                    {% for header in headers %}
+                        <th>{{ header }}</th>
+                    {% endfor %}
+                    <th id="actions-header" style="display:none;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                    <tr>
+                        {% for header in headers %}
+                            <td 
+                                contenteditable="false"
+                                data-msv="{{ row['Mã sinh viên'] }}"
+                                data-header="{{ header }}">
+                                {{ row[header] }}
+                            </td>
+                        {% endfor %}
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="footer">
+        © lvh 2025-2026. All Rights Reserved.
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+<script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+<script src="{{ url_for('static', filename='js/task.js') }}"></script>
+</body>
+</html>

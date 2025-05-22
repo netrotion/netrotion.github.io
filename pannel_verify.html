@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <title>Xác thực truy cập</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/verify_pannel.css') }}" />
+    <link rel="icon" href="https://i.pinimg.com/736x/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.jpg" type="image/png">
+</head>
+<body>
+    <div class="verify-box">
+        <h2 class="verify-title">Xác thực</h2>
+        <form id="verify-form" autocomplete="off">
+            <input type="password" id="password" placeholder="Mật khẩu" required />
+            <button type="submit">Xác nhận</button>
+        </form>
+        <div class="error" id="error-msg" style="display:none;">Sai mật khẩu!</div>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const token = localStorage.getItem('admin_token');
+        if (token) {
+            fetch('/api/check_token', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({token: token})
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.ok && data.direct_url) {
+                    window.location.href = data.direct_url;
+                }
+            });
+        }
+
+        document.getElementById('verify-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            document.getElementById('error-msg').style.display = 'none';
+            const pw = document.getElementById('password').value;
+            try {
+                const res = await fetch('/api/check_password', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({password: pw})
+                });
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data.access_token) {
+                        localStorage.setItem('admin_token', data.access_token);
+                    }
+                    window.location.href = data.direct_url;
+                } else {
+                    document.getElementById('error-msg').style.display = 'block';
+                }
+            } catch {
+                document.getElementById('error-msg').style.display = 'block';
+            }
+        });
+    });
+</script>
+</body>
+</html>

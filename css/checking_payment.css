@@ -1,0 +1,167 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    max-width: 420px;
+    width: 100%;
+    padding: 32px 28px 24px 28px;
+    margin: 32px 0;
+    position: relative;
+}
+.card-header {
+    text-align: center;
+    margin-bottom: 18px;
+}
+.card-header h4 {
+    margin: 0;
+    font-size: 22px;
+    color: #2d3a4b;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.qr-code-container {
+    text-align: center;
+    margin: 18px 0 22px 0;
+}
+.qr-code-container img {
+    border-radius: 12px;
+    border: 2px solid #e3e3e3;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+ul.list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+}
+.list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 15px;
+}
+.list-group-item:last-child {
+    border-bottom: none;
+}
+.list-label {
+    color: #6c757d;
+    font-weight: 500;
+}
+.list-value {
+    font-weight: 700;
+    font-size: 15px;
+}
+#copySTK1 { color: #1abc9c; }
+#name { color: #222; }
+#bank_name { color: #2e86de; }
+#amount { color: #0984e3; }
+#copyNoiDung1 { color: #e74c3c; }
+.copy {
+    background: #f1f3f6;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    margin-left: 8px;
+    font-size: 15px;
+    color: #2e86de;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.copy:hover {
+    background: #d0e6fa;
+}
+.auto-process {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    color: #636e72;
+    font-size: 14px;
+}
+.auto-process i {
+    margin-right: 8px;
+    color: #0984e3;
+}
+@media (max-width: 500px) {
+    .card {
+        padding: 18px 6px 14px 6px;
+    }
+}
+
+.error-message {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    left: auto;
+    z-index: 9999;
+    background: #fff;
+    border: 1px solid #e74c3c;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(231, 76, 60, 0.15);
+    padding: 14px 18px;
+    min-width: 200px;
+    max-width: 70vw;
+    font-size: 15px;
+    animation: slideInRight 0.3s;
+    word-break: break-word;  
+    white-space: normal;  
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(100px);}
+    to { opacity: 1; transform: translateX(0);}
+}
+
+.error-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.error-content h4 {
+    color: #e74c3c;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.error-content p {
+    color: #636e72;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.error-content img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 18px;
+}
+
+.error-content .btn {
+    background: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.error-content .btn:hover {
+    background: #c0392b;
+}

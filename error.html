@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Lỗi xảy ra</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/error.css') }}" />
+    <link rel="icon" href="https://i.pinimg.com/736x/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.jpg" type="image/png">
+</head>
+<body>
+    <div class="error-box">
+        <h1>❌ Đã xảy ra lỗi</h1>
+        <p>{{ error_message }}</p>
+        <a href="/">Quay về trang chủ</a>
+    </div>
+</body>
+</html>

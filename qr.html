@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Nạp Tiền Task - Banking Project</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="https://i.pinimg.com/736x/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.jpg" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/qr.css') }}" />
+</head>
+
+<body>
+  <div class="container">
+    <h2><i class="fa-solid fa-money-bill-wave"></i> Nạp quỹ - Haui</h2>
+    <div class="info">
+        <i class="fa fa-info-circle"></i> Vui lòng chọn Task ID, số tiền cần nạp và nhập mã sinh viên để xác thực trước khi nạp tiền, nếu mã sinh viên không đúng hoặc không tồn tại, vui lòng kiểm tra lại mã sinh viên hoặc liên hệ với admin để được hỗ trợ.
+        <br>
+    </div>
+
+    <label for="studentCode">Nhập mã sinh viên:</label>
+    <input type="text" id="studentCode" placeholder="VD: 20123456"/>
+    <button type="button" class="check-btn" onclick="kiemTraSinhVien()"><i class="fa fa-check"></i> Kiểm tra mã sinh viên</button>
+    <div class="student-info" id="studentInfo"></div>
+
+    <label for="taskId">Chọn Task ID:</label>
+    <select id="taskId">
+        <option value="">Đang tải danh sách task...</option>
+    </select>
+
+    <label for="amount">Số tiền cần nạp (VNĐ):</label>
+    <select id="amount" disabled>
+        <option value="">Chọn Task ID trước</option>
+    </select>
+    <div class="price" id="price"></div>
+
+    <button onclick="taoHoaDon()">Tạo hóa đơn</button>
+    <button type="button" class="back-btn" onclick="window.location.href='/'" style="margin-top:14px;">
+      <i class="fa fa-arrow-left"></i> Quay về trang chủ
+    </button>
+  </div>
+<script src="{{ url_for('static', filename='js/qr.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quản lý quỹ lớp</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pannel.css') }}" />
+    <link rel="icon" href="https://i.pinimg.com/736x/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.jpg" type="image/png">
+    <script>
+        window.ACCESS_TOKEN = "{{ token|default('') }}";
+    </script>
+</head>
+<body>
+    <div style="text-align:right;max-width:1200px;margin:0 auto 10px auto;">
+        <button id="toggle-theme" style="margin-bottom:10px;">🌙 Chế độ tối</button>
+        <button id="back-home-btn" style="margin-left:10px;margin-bottom:10px;">🏠 Trang chủ</button>
+    </div>
+    <div class="container">
+        <aside class="left-box">
+            <h2>📊 Thêm quỹ quản lý</h2>
+            
+            <form id="add-task-form" autocomplete="off">
+                <input type="text" id="task-name" class="input" placeholder="ID task (ex: quydecuong)" required />
+                <input type="text" id="task-description" class="input" placeholder="Mô tả" required />
+                <input type="text" id="task-price" class="input" placeholder="Số tiền cần đóng" required />
+                <button type="submit" class="btn">Tạo task</button>
+            </form>
+
+            <hr style="margin:18px 0;">
+            <h2>🗑️ Logging</h2>
+            <ul id="logging-list" style="max-height:100px;overflow:auto;font-size:0.95em;padding-left:18px;"></ul>
+            <hr style="margin:18px 0;">
+
+            
+            <h2>💳 Banking Info</h2>
+            <div id="bank-info-display" style="margin-bottom:18px;">
+                <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+                    <b style="min-width:120px;">Trạng thái đăng nhập:</b>
+                    <span id="login-status-dot" style="display:inline-block;width:16px;height:16px;border-radius:50%;background:#f1c40f;margin-right:8px;"></span>
+                    <span id="login-status-text" style="font-weight:500;color:#888;min-width:110px;display:inline-block;">Chưa xác thực</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                    <b style="min-width:90px;">BrowserID:</b>
+                    <span id="display-browser-id" style="word-break:break-all;">Chưa có</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                    <b style="min-width:90px;">Tài khoản:</b>
+                    <span id="display-bank-username" style="word-break:break-all;">Chưa có</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                    <b style="min-width:90px;">Mật khẩu:</b>
+                    <span id="display-bank-password">*********</span>
+                </div>
+                <div style="display:flex;gap:10px;margin-top:10px;">
+                    <button type="button" class="btn" id="edit-bank-info-btn" style="flex:1;">Chỉnh sửa</button>
+                    <button type="button" class="btn" id="check-login-status-btn" style="flex:1;">Kiểm tra trạng thái</button>
+                </div>
+            </div>
+            <form id="bank-info-form" autocomplete="off" style="display:none;">
+                <div class="input-wrapper" style="display:flex;gap:8px;align-items:center;">
+                    <input type="text" id="browser-id" class="input" placeholder="Browser ID" required style="flex:1;" />
+                    <button type="button" class="btn" id="get-browser-id-btn" style="padding:6px 12px;white-space:nowrap;">Lấy BrowserID</button>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="bank-username" class="input" placeholder="Username" required />
+                </div>
+                <div class="input-wrapper">
+                    <input type="password" id="bank-password" class="input" placeholder="Password" required />
+                    <span class="toggle-password" onclick="togglePassword('bank-password', this)">👁️</span>
+                </div>
+                <div style="display:flex;gap:8px;">
+                    <button type="submit" class="btn" style="flex:1;">Lưu thông tin</button>
+                    <button type="button" class="btn" id="cancel-edit-bank-info-btn" style="flex:1;">Hủy</button>
+                </div>
+            </form>
+            <div class="success" id="bank-info-success" style="display:none;color:green;margin-top:8px;">Lưu thông tin thành công!</div>
+            <div class="error" id="bank-info-error" style="display:none;color:#e74c3c;margin-top:8px;"></div>
+
+            <hr style="margin:18px 0;">
+            <h2>🔑 Đổi mật khẩu pannel</h2>
+            <form id="change-password-form" autocomplete="off">
+                <div class="input-wrapper">
+                    <input type="password" id="old-password" class="input" placeholder="Mật khẩu cũ" required />
+                    <span class="toggle-password" onclick="togglePassword('old-password', this)">👁️</span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="password" id="new-password" class="input" placeholder="Mật khẩu mới" required />
+                    <span class="toggle-password" onclick="togglePassword('new-password', this)">👁️</span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="password" id="confirm-new-password" class="input" placeholder="Xác nhận mật khẩu" required />
+                    <span class="toggle-password" onclick="togglePassword('confirm-new-password', this)">👁️</span>
+                </div>
+                <button type="submit" class="btn">Đổi mật khẩu</button>
+            </form>
+
+            <div class="error" id="change-error" style="display:none;color:#e74c3c;margin-top:8px;"></div>
+            <div class="success" id="change-success" style="display:none;color:green;margin-top:8px;">Đổi mật khẩu thành công!</div>
+        </aside>
+        <main class="right-box">
+            <h1>📚 Danh sách quỹ quản lý</h1>
+            <div id="tasks-container"></div>
+            
+        </main>
+    </div>
+<script src="{{ url_for('static', filename='js/pannel.js') }}"></script>
+</body>
+</html>

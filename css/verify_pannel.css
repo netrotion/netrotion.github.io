@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: url('/static/img/b1.gif') no-repeat center center fixed;
+
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.verify-box {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 40px 48px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    text-align: center;
+    min-width: 340px;
+}
+
+.verify-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d3a4b;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+input[type="password"] {
+    padding: 10px 12px;
+    width: auto;
+    border: 1.5px solid #bfc9d1;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-right: 12px;
+    transition: border 0.2s;
+    box-sizing: border-box;
+    margin-bottom: 18px; 
+}
+
+input[type="password"]:focus {
+    border: 1.5px solid #4a90e2;
+    outline: none;
+}
+
+button {
+    padding: 10px 22px;
+    background: linear-gradient(90deg, #4a90e2 0%, #357ab8 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 6px;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #357ab8 0%, #4a90e2 100%);
+}
+
+.error {
+    color: #e74c3c;
+    margin-top: 14px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
