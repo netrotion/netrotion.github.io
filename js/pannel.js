@@ -340,7 +340,7 @@ document.getElementById('cancel-edit-bank-info-btn').onclick = function() {
     document.getElementById('bank-info-display').style.display = '';
 };
 document.getElementById('get-browser-id-btn').onclick = function() {
-    window.open('/get_browser_id', '_blank');
+    window.open('/fingerprint', '_blank');
 };
 
 document.getElementById('check-login-status-btn').onclick = checkBankLoginStatus;
