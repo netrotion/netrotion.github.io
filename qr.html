@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -7,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="https://i.pinimg.com/736x/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.jpg" type="image/png">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/qr.css') }}" />
+    <link rel="stylesheet" href="/static/css/qr.css" />
 </head>
 
 <body>
@@ -35,10 +36,7 @@
     <div class="price" id="price"></div>
 
     <button onclick="taoHoaDon()">Tạo hóa đơn</button>
-    <button type="button" class="back-btn" onclick="window.location.href='/'" style="margin-top:14px;">
-      <i class="fa fa-arrow-left"></i> Quay về trang chủ
-    </button>
   </div>
-<script src="{{ url_for('static', filename='js/qr.js') }}"></script>
+<script src="/js/qr.js"></script>
 </body>
 </html>

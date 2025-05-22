@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/task.css') }}" />
-    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="/static/css/task.css" />
+    <title>Danh sách học sinh</title>
     <link rel="icon" href="https://i.pinimg.com/736x/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.jpg" type="image/png">
 
 </head>
@@ -19,13 +20,13 @@
         </div>
     </div>
     
-    <h2>{{ table_title }}</h2>
+    <h2>📋 Danh sách chuyển khoản lớp ktpm02 - HAUI K19</h2>
 
     <div class="info-container">
-        <p>Mô tả task: {{ table_info }}</p>
-        <p>Chi phí từng thành viên: {{ price }}</p>
-        <p>Đã chuyển tiền: {{ list_success }} người</p>
-        <p>Chưa chuyển tiền: {{ list_not_success }} người</p>
+        <p>Mô tả task: 2 ngan</p>
+        <p>Chi phí từng thành viên: 2000 VNĐ</p>
+        <p>Đã chuyển tiền: 5 người</p>
+        <p>Chưa chuyển tiền: 55 người</p>
     </div>
 
     <div class="export-container">
@@ -37,30 +38,3084 @@
         <table id="studentTable" border="1" cellspacing="0" cellpadding="5">
             <thead>
                 <tr> 
-                    {% for header in headers %}
-                        <th>{{ header }}</th>
-                    {% endfor %}
+                    
+                        <th>Số thứ tự</th>
+                    
+                        <th>Mã sinh viên</th>
+                    
+                        <th>Họ và tên</th>
+                    
+                        <th>Trạng thái</th>
+                    
+                        <th>Số tiền đã chuyển</th>
+                    
+                        <th>Thông báo</th>
+                    
                     <th id="actions-header" style="display:none;">Actions</th>
                 </tr>
             </thead>
             <tbody>
-                {% for row in rows %}
+                
                     <tr>
-                        {% for header in headers %}
+                        
                             <td 
                                 contenteditable="false"
-                                data-msv="{{ row['Mã sinh viên'] }}"
-                                data-header="{{ header }}">
-                                {{ row[header] }}
+                                data-msv="2024604278"
+                                data-header="Số thứ tự">
+                                1
                             </td>
-                        {% endfor %}
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604278"
+                                data-header="Mã sinh viên">
+                                2024604278
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604278"
+                                data-header="Họ và tên">
+                                LÊ QUANG ANH
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604278"
+                                data-header="Trạng thái">
+                                Đã chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604278"
+                                data-header="Số tiền đã chuyển">
+                                2200
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604278"
+                                data-header="Thông báo">
+                                Đã chuyển 2200 VNĐ
+                            </td>
+                        
                         <td class="edit-cell" style="display:none;">
                             <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
                             <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
                             <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
                         </td>
                     </tr>
-                {% endfor %}
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603544"
+                                data-header="Số thứ tự">
+                                2
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603544"
+                                data-header="Mã sinh viên">
+                                2024603544
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603544"
+                                data-header="Họ và tên">
+                                TẠ PHƯƠNG ANH
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603544"
+                                data-header="Trạng thái">
+                                Đã chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603544"
+                                data-header="Số tiền đã chuyển">
+                                2000
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603544"
+                                data-header="Thông báo">
+                                Đã chuyển 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603588"
+                                data-header="Số thứ tự">
+                                3
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603588"
+                                data-header="Mã sinh viên">
+                                2024603588
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603588"
+                                data-header="Họ và tên">
+                                LƯU GIA BẢO
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603588"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603588"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603588"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603860"
+                                data-header="Số thứ tự">
+                                4
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603860"
+                                data-header="Mã sinh viên">
+                                2024603860
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603860"
+                                data-header="Họ và tên">
+                                NGUYỄN VĂN CHỨC
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603860"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603860"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603860"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604144"
+                                data-header="Số thứ tự">
+                                5
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604144"
+                                data-header="Mã sinh viên">
+                                2024604144
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604144"
+                                data-header="Họ và tên">
+                                NGUYỄN BÙI THÀN ĐẠT
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604144"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604144"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604144"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604568"
+                                data-header="Số thứ tự">
+                                6
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604568"
+                                data-header="Mã sinh viên">
+                                2024604568
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604568"
+                                data-header="Họ và tên">
+                                NGUYỄN THÀNH ĐẠT
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604568"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604568"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604568"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604761"
+                                data-header="Số thứ tự">
+                                7
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604761"
+                                data-header="Mã sinh viên">
+                                2024604761
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604761"
+                                data-header="Họ và tên">
+                                NGUYỄN VĂN ĐOÀN
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604761"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604761"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604761"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604346"
+                                data-header="Số thứ tự">
+                                8
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604346"
+                                data-header="Mã sinh viên">
+                                2024604346
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604346"
+                                data-header="Họ và tên">
+                                ĐỖ THỊ HOÀI ĐÔNG
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604346"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604346"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604346"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603542"
+                                data-header="Số thứ tự">
+                                9
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603542"
+                                data-header="Mã sinh viên">
+                                2024603542
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603542"
+                                data-header="Họ và tên">
+                                NGUYỄN VIỆT ĐỨC
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603542"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603542"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603542"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603443"
+                                data-header="Số thứ tự">
+                                10
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603443"
+                                data-header="Mã sinh viên">
+                                2024603443
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603443"
+                                data-header="Họ và tên">
+                                LÊ VŨ DŨNG
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603443"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603443"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603443"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604495"
+                                data-header="Số thứ tự">
+                                11
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604495"
+                                data-header="Mã sinh viên">
+                                2024604495
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604495"
+                                data-header="Họ và tên">
+                                PHẠM DƯƠNG VIỆT DŨNG
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604495"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604495"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604495"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604267"
+                                data-header="Số thứ tự">
+                                12
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604267"
+                                data-header="Mã sinh viên">
+                                2024604267
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604267"
+                                data-header="Họ và tên">
+                                NGUYỄN ĐÌNH DƯƠNG
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604267"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604267"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604267"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604760"
+                                data-header="Số thứ tự">
+                                13
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604760"
+                                data-header="Mã sinh viên">
+                                2024604760
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604760"
+                                data-header="Họ và tên">
+                                PHẠM HỮU DUY
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604760"
+                                data-header="Trạng thái">
+                                Đã chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604760"
+                                data-header="Số tiền đã chuyển">
+                                2000
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604760"
+                                data-header="Thông báo">
+                                Đã chuyển 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603737"
+                                data-header="Số thứ tự">
+                                14
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603737"
+                                data-header="Mã sinh viên">
+                                2024603737
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603737"
+                                data-header="Họ và tên">
+                                HOÀNG PHÚC GIÁP
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603737"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603737"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603737"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604751"
+                                data-header="Số thứ tự">
+                                15
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604751"
+                                data-header="Mã sinh viên">
+                                2024604751
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604751"
+                                data-header="Họ và tên">
+                                NHỮ ĐÌNH HIỆP
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604751"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604751"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604751"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604685"
+                                data-header="Số thứ tự">
+                                16
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604685"
+                                data-header="Mã sinh viên">
+                                2024604685
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604685"
+                                data-header="Họ và tên">
+                                NGUYỄN BÁ HIẾU
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604685"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604685"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604685"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604619"
+                                data-header="Số thứ tự">
+                                17
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604619"
+                                data-header="Mã sinh viên">
+                                2024604619
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604619"
+                                data-header="Họ và tên">
+                                NGUYỄN MINH HIẾU
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604619"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604619"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604619"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603655"
+                                data-header="Số thứ tự">
+                                18
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603655"
+                                data-header="Mã sinh viên">
+                                2024603655
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603655"
+                                data-header="Họ và tên">
+                                NGUYỄN THANH HIẾU
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603655"
+                                data-header="Trạng thái">
+                                Đã chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603655"
+                                data-header="Số tiền đã chuyển">
+                                3192837618236871
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603655"
+                                data-header="Thông báo">
+                                Đã chuyển 3192837618236871 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603779"
+                                data-header="Số thứ tự">
+                                19
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603779"
+                                data-header="Mã sinh viên">
+                                2024603779
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603779"
+                                data-header="Họ và tên">
+                                NGUYỄN TRUNG HOÀNG
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603779"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603779"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603779"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604834"
+                                data-header="Số thứ tự">
+                                20
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604834"
+                                data-header="Mã sinh viên">
+                                2024604834
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604834"
+                                data-header="Họ và tên">
+                                BÙI HỮU HOẠT
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604834"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604834"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604834"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604869"
+                                data-header="Số thứ tự">
+                                21
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604869"
+                                data-header="Mã sinh viên">
+                                2024604869
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604869"
+                                data-header="Họ và tên">
+                                PHẠM NGỌC HUẾ
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604869"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604869"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604869"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604757"
+                                data-header="Số thứ tự">
+                                22
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604757"
+                                data-header="Mã sinh viên">
+                                2024604757
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604757"
+                                data-header="Họ và tên">
+                                LÊ VIỆT HÙNG
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604757"
+                                data-header="Trạng thái">
+                                Đã chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604757"
+                                data-header="Số tiền đã chuyển">
+                                2000
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604757"
+                                data-header="Thông báo">
+                                Đã chuyển 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603640"
+                                data-header="Số thứ tự">
+                                23
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603640"
+                                data-header="Mã sinh viên">
+                                2024603640
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603640"
+                                data-header="Họ và tên">
+                                LƯU CÔNG HÙNG
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603640"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603640"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603640"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603475"
+                                data-header="Số thứ tự">
+                                24
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603475"
+                                data-header="Mã sinh viên">
+                                2024603475
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603475"
+                                data-header="Họ và tên">
+                                NGUYỄN MINH KHÁNH
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603475"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603475"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603475"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604975"
+                                data-header="Số thứ tự">
+                                25
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604975"
+                                data-header="Mã sinh viên">
+                                2024604975
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604975"
+                                data-header="Họ và tên">
+                                TRẦN NAM KHÁNH
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604975"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604975"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604975"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603573"
+                                data-header="Số thứ tự">
+                                26
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603573"
+                                data-header="Mã sinh viên">
+                                2024603573
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603573"
+                                data-header="Họ và tên">
+                                ĐẶNG TRUNG KIÊN
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603573"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603573"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603573"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603500"
+                                data-header="Số thứ tự">
+                                27
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603500"
+                                data-header="Mã sinh viên">
+                                2024603500
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603500"
+                                data-header="Họ và tên">
+                                ĐOÀN VŨ TRUNG KIÊN
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603500"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603500"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603500"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605040"
+                                data-header="Số thứ tự">
+                                28
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605040"
+                                data-header="Mã sinh viên">
+                                2024605040
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605040"
+                                data-header="Họ và tên">
+                                NGUYỄN ĐÌNH LUÂ KIỆT
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605040"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605040"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605040"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603552"
+                                data-header="Số thứ tự">
+                                29
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603552"
+                                data-header="Mã sinh viên">
+                                2024603552
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603552"
+                                data-header="Họ và tên">
+                                NGHIÊM TRỌNG LÂM
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603552"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603552"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603552"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604819"
+                                data-header="Số thứ tự">
+                                30
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604819"
+                                data-header="Mã sinh viên">
+                                2024604819
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604819"
+                                data-header="Họ và tên">
+                                NGUYỄN VIẾT LỘC
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604819"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604819"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604819"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603468"
+                                data-header="Số thứ tự">
+                                31
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603468"
+                                data-header="Mã sinh viên">
+                                2024603468
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603468"
+                                data-header="Họ và tên">
+                                VŨ NGỌC BẢO LONG
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603468"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603468"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603468"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604448"
+                                data-header="Số thứ tự">
+                                32
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604448"
+                                data-header="Mã sinh viên">
+                                2024604448
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604448"
+                                data-header="Họ và tên">
+                                HÀ ĐỨC LƯƠNG
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604448"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604448"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604448"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604392"
+                                data-header="Số thứ tự">
+                                33
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604392"
+                                data-header="Mã sinh viên">
+                                2024604392
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604392"
+                                data-header="Họ và tên">
+                                NGUYỄN DUY MẠNH
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604392"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604392"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604392"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603626"
+                                data-header="Số thứ tự">
+                                34
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603626"
+                                data-header="Mã sinh viên">
+                                2024603626
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603626"
+                                data-header="Họ và tên">
+                                HOÀNG MINH DUY NAM
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603626"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603626"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603626"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604970"
+                                data-header="Số thứ tự">
+                                35
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604970"
+                                data-header="Mã sinh viên">
+                                2024604970
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604970"
+                                data-header="Họ và tên">
+                                NGUYỄN TRUNG NAM
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604970"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604970"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604970"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603612"
+                                data-header="Số thứ tự">
+                                36
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603612"
+                                data-header="Mã sinh viên">
+                                2024603612
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603612"
+                                data-header="Họ và tên">
+                                PHAN TUẤN NGHĨA
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603612"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603612"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603612"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603532"
+                                data-header="Số thứ tự">
+                                37
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603532"
+                                data-header="Mã sinh viên">
+                                2024603532
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603532"
+                                data-header="Họ và tên">
+                                VŨ TRUNG NGHĨA
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603532"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603532"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603532"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605056"
+                                data-header="Số thứ tự">
+                                38
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605056"
+                                data-header="Mã sinh viên">
+                                2024605056
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605056"
+                                data-header="Họ và tên">
+                                NGUYỄN TIẾN NGỌC
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605056"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605056"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605056"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603582"
+                                data-header="Số thứ tự">
+                                39
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603582"
+                                data-header="Mã sinh viên">
+                                2024603582
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603582"
+                                data-header="Họ và tên">
+                                NGUYỄN THU PHƯƠNG
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603582"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603582"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603582"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604268"
+                                data-header="Số thứ tự">
+                                40
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604268"
+                                data-header="Mã sinh viên">
+                                2024604268
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604268"
+                                data-header="Họ và tên">
+                                NGUYỄN MINH QUÂN
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604268"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604268"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604268"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604291"
+                                data-header="Số thứ tự">
+                                41
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604291"
+                                data-header="Mã sinh viên">
+                                2024604291
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604291"
+                                data-header="Họ và tên">
+                                PHẠM HỮU QUÂN
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604291"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604291"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604291"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605012"
+                                data-header="Số thứ tự">
+                                42
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605012"
+                                data-header="Mã sinh viên">
+                                2024605012
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605012"
+                                data-header="Họ và tên">
+                                BÙI VIỆT QUANG
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605012"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605012"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605012"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605082"
+                                data-header="Số thứ tự">
+                                43
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605082"
+                                data-header="Mã sinh viên">
+                                2024605082
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605082"
+                                data-header="Họ và tên">
+                                LÊ VŨ VINH QUANG
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605082"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605082"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605082"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604778"
+                                data-header="Số thứ tự">
+                                44
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604778"
+                                data-header="Mã sinh viên">
+                                2024604778
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604778"
+                                data-header="Họ và tên">
+                                BÙI MINH TÂM
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604778"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604778"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604778"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605029"
+                                data-header="Số thứ tự">
+                                45
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605029"
+                                data-header="Mã sinh viên">
+                                2024605029
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605029"
+                                data-header="Họ và tên">
+                                PHẠM CÔNG TÂM
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605029"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605029"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024605029"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604261"
+                                data-header="Số thứ tự">
+                                46
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604261"
+                                data-header="Mã sinh viên">
+                                2024604261
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604261"
+                                data-header="Họ và tên">
+                                NGUYỄN HỮU THẮNG
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604261"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604261"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604261"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604718"
+                                data-header="Số thứ tự">
+                                47
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604718"
+                                data-header="Mã sinh viên">
+                                2024604718
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604718"
+                                data-header="Họ và tên">
+                                NGUYỄN CÔNG THÀNH
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604718"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604718"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604718"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604974"
+                                data-header="Số thứ tự">
+                                48
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604974"
+                                data-header="Mã sinh viên">
+                                2024604974
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604974"
+                                data-header="Họ và tên">
+                                HÀ XUÂN GIA THIỆN
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604974"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604974"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604974"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604888"
+                                data-header="Số thứ tự">
+                                49
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604888"
+                                data-header="Mã sinh viên">
+                                2024604888
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604888"
+                                data-header="Họ và tên">
+                                ĐỖ THỊ THƯƠNG
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604888"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604888"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604888"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604904"
+                                data-header="Số thứ tự">
+                                50
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604904"
+                                data-header="Mã sinh viên">
+                                2024604904
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604904"
+                                data-header="Họ và tên">
+                                NGUYỄN NGỌC TIẾN
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604904"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604904"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604904"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604845"
+                                data-header="Số thứ tự">
+                                51
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604845"
+                                data-header="Mã sinh viên">
+                                2024604845
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604845"
+                                data-header="Họ và tên">
+                                PHẠM QUỐC TOẢN
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604845"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604845"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604845"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604642"
+                                data-header="Số thứ tự">
+                                52
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604642"
+                                data-header="Mã sinh viên">
+                                2024604642
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604642"
+                                data-header="Họ và tên">
+                                NGUYỄN ĐÌNH TRÀ
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604642"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604642"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604642"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604466"
+                                data-header="Số thứ tự">
+                                53
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604466"
+                                data-header="Mã sinh viên">
+                                2024604466
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604466"
+                                data-header="Họ và tên">
+                                MAI ĐÌNH TRUNG
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604466"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604466"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604466"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603428"
+                                data-header="Số thứ tự">
+                                54
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603428"
+                                data-header="Mã sinh viên">
+                                2024603428
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603428"
+                                data-header="Họ và tên">
+                                TẠ DANH TRUNG
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603428"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603428"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024603428"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604307"
+                                data-header="Số thứ tự">
+                                55
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604307"
+                                data-header="Mã sinh viên">
+                                2024604307
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604307"
+                                data-header="Họ và tên">
+                                NGUYỄN THẾ HOÀ tUÂN 
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604307"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604307"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604307"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604176"
+                                data-header="Số thứ tự">
+                                56
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604176"
+                                data-header="Mã sinh viên">
+                                2024604176
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604176"
+                                data-header="Họ và tên">
+                                PHẠM TRỌNG ANH TUÂN
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604176"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604176"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604176"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604579"
+                                data-header="Số thứ tự">
+                                57
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604579"
+                                data-header="Mã sinh viên">
+                                2024604579
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604579"
+                                data-header="Họ và tên">
+                                TRẦN ĐỨC TUẤN
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604579"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604579"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604579"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604511"
+                                data-header="Số thứ tự">
+                                58
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604511"
+                                data-header="Mã sinh viên">
+                                2024604511
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604511"
+                                data-header="Họ và tên">
+                                TRẦN NGỌC TUẤN
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604511"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604511"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604511"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604200"
+                                data-header="Số thứ tự">
+                                59
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604200"
+                                data-header="Mã sinh viên">
+                                2024604200
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604200"
+                                data-header="Họ và tên">
+                                CÙ ĐÌNH VŨ
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604200"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604200"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604200"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604467"
+                                data-header="Số thứ tự">
+                                60
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604467"
+                                data-header="Mã sinh viên">
+                                2024604467
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604467"
+                                data-header="Họ và tên">
+                                TRẦN PHÚC MINH VŨ
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604467"
+                                data-header="Trạng thái">
+                                Chưa chuyển
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604467"
+                                data-header="Số tiền đã chuyển">
+                                0
+                            </td>
+                        
+                            <td 
+                                contenteditable="false"
+                                data-msv="2024604467"
+                                data-header="Thông báo">
+                                Còn thiếu 2000 VNĐ
+                            </td>
+                        
+                        <td class="edit-cell" style="display:none;">
+                            <button class="edit-btn" style="display:none;" onclick="enableEdit(this)">Chỉnh sửa</button>
+                            <button class="save-btn" style="display:none;" onclick="saveRow(this)">Lưu</button>
+                            <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                        </td>
+                    </tr>
+                
             </tbody>
         </table>
     </div>
@@ -71,6 +3126,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
 <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
-<script src="{{ url_for('static', filename='js/task.js') }}"></script>
+<script src="/static/js/task.js"></script>
 </body>
 </html>

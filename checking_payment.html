@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thanh toán chuyển khoản</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/checking_payment.css') }}">
+  <link rel="stylesheet" href="/css/checking_payment.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="https://i.pinimg.com/736x/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.jpg" type="image/png">
 </head>
@@ -16,7 +17,7 @@
         <h4><i class="fa-solid fa-money-bill-wave"></i> Nạp quỹ</h4>
       </div>
       <div class="qr-code-container">
-        <img src="{{ qr_img_url }}" id="qrImage" width="220" alt="QR VietQR">
+        <img src="https://img.vietqr.io/image/VCB-1057236828-33RNEb1.jpg?amount=2000&amp;addInfo=OSOFvSFOXAOwLmw&amp;accountName=NGUY%E1%BB%84N+V%C4%82N+CH%E1%BB%A8C" id="qrImage" width="220" alt="QR VietQR">
         <div style="margin-top: 8px; color: #636e72; font-size: 13px;">
           Quét mã QR bằng app ngân hàng
         </div>
@@ -31,21 +32,21 @@
         <li class="list-group-item">
           <span class="list-label">Số tài khoản:</span>
           <span>
-            <span class="list-value" id="copySTK1">{{ account_number }}</span>
+            <span class="list-value" id="copySTK1">1057236828</span>
             <button class="copy" data-clipboard-target="#copySTK1" title="Sao chép"><i class="fa fa-copy"></i></button>
           </span>
         </li>
         <li class="list-group-item">
           <span class="list-label">Chủ tài khoản:</span>
           <span>
-            <span class="list-value" id="name">{{ account_name }}</span>
+            <span class="list-value" id="name">NGUYỄN VĂN CHỨC</span>
             <button class="copy" data-clipboard-target="#name" title="Sao chép"><i class="fa fa-copy"></i></button>
           </span>
         </li>
         <li class="list-group-item">
           <span class="list-label">Ngân hàng:</span>
           <span>
-            <span class="list-value" id="bank_name">{{ bank_name }}</span>
+            <span class="list-value" id="bank_name">Vietcombank</span>
             <button class="copy" data-clipboard-target="#bank_name" title="Sao chép"><i class="fa fa-copy"></i></button>
           </span>
         </li>
@@ -53,7 +54,7 @@
           <span class="list-label">Số tiền:</span>
           <span>
             <span class="list-value" id="amount">
-              {{ "{:,.0f}".format(amount|float).replace(",", ".") }} VNĐ
+              2.000 VNĐ
             </span>
             <button class="copy" data-clipboard-target="#amount" title="Sao chép"><i class="fa fa-copy"></i></button>
           </span>
@@ -61,7 +62,7 @@
         <li class="list-group-item">
           <span class="list-label">Nội dung:</span>
           <span>
-            <span class="list-value" id="copyNoiDung1" style="max-width: 160px; display: inline-block; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; white-space: nowrap;" title="{{ code }}">{{ code }}</span>
+            <span class="list-value" id="copyNoiDung1" style="max-width: 160px; display: inline-block; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; white-space: nowrap;" title="OSOFvSFOXAOwLmw">OSOFvSFOXAOwLmw</span>
             <button class="copy" data-clipboard-target="#copyNoiDung1" title="Sao chép"><i class="fa fa-copy"></i></button>
           </span>
         </li>
@@ -101,7 +102,7 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
 <script type="text/javascript">
-const code = "{{ code }}";
+const code = "OSOFvSFOXAOwLmw"; //trouble
 function checkPayment() {
   fetch(`/check_payment_status?code=${code}`)
     .then(res => res.json())
